@@ -44,30 +44,43 @@ def substitute_pipeline_params(
     return ppp
 
 
-def get_bucket_name_and_path(uri):
+def _get_bucket_name_and_path(uri):
     no_prefix_uri = uri[len("gs://"):]
     splits = no_prefix_uri.split("/")
     return splits[0], "/".join(splits[1:])
 
 
-def write_to_gcs(uri: str, content: str):
-    bucket_name, path = get_bucket_name_and_path(uri)
+def _write_to_gcs(uri: str, content: str):
+    bucket_name, path = _get_bucket_name_and_path(uri)
     storage_client = storage.Client()
     bucket = storage_client.get_bucket(bucket_name)
     blob = bucket.blob(path)
     blob.upload_from_string(content)
 
 
-def generate_auto_transformation(column_names: List[str]) -> List[Dict[str, Any]]:
+def _generate_auto_transformation(column_names: List[str]) -> List[Dict[str, Any]]:
     transformations = []
     for column_name in column_names:
         transformations.append({"auto": {"column_name": column_name}})
     return transformations
 
 
-def write_auto_transformations(uri: str, column_names: List[str]):
-    transformations = generate_auto_transformation(column_names)
-    write_to_gcs(uri, json.dumps(transformations))
+def _write_auto_transformations(uri: str, column_names: List[str]):
+    transformations = _generate_auto_transformation(column_names)
+    _write_to_gcs(uri, json.dumps(transformations))
+
+    logging.info("Transformations config written: {}".format(uri))
+
+
+def _read_custom_transformation_file(custom_transformation_file: str):
+    import json
+    with open(custom_transformation_file, "r") as f:
+        transformations = json.load(f)
+    return transformations
+
+def _write_custom_transformations(uri: str, custom_transformation_file: str):
+    transformations = _read_custom_transformation_file(custom_transformation_file)
+    _write_to_gcs(uri, json.dumps(transformations))
 
     logging.info("Transformations config written: {}".format(uri))
 
@@ -264,15 +277,22 @@ def compile_automl_tabular_pipeline(
 
     logging.info(f'features:{schema}')
 
-    write_auto_transformations(pipeline_parameters['transformations'], schema)
+    if 'custom_transformations' in pipeline_parameters.keys():
+        logging.info("Reading custom transformations file: {}".format(pipeline_parameters['custom_transformations']))
+        _write_custom_transformations(pipeline_parameters['transformations'], 
+                                      pipeline_parameters['custom_transformations'])
+    else:
+        _write_auto_transformations(pipeline_parameters['transformations'], schema)
+
     if pipeline_parameters['predefined_split_key']:
         pipeline_parameters['training_fraction'] = None
         pipeline_parameters['validation_fraction'] = None
         pipeline_parameters['test_fraction'] = None
 
-    # write_to_gcs(pipeline_parameters['transform_config_path'], json.dumps(transformations))
-
+    # Remove unnecesary keys
     pipeline_parameters.pop('data_source_bigquery_table_schema', None)
+    pipeline_parameters.pop('custom_transformations', None)
+
     (
         tp,
         parameter_values,

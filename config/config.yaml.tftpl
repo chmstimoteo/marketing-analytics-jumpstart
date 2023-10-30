@@ -175,6 +175,7 @@ vertex_ai:
           location: "${cloud_region}"
           root_dir: "gs://${project_id}-pipelines/propensity-training"
           transformations: "gs://${project_id}-pipelines/propensity-training/transformations_config_{timestamp}.json"
+          custom_transformations: "pipelines/transformations-purchase-propensity.json"
           train_budget_milli_node_hours: 1000 # 1 hour
           run_evaluation: true
           run_distillation: false
@@ -343,6 +344,7 @@ vertex_ai:
           location: "${cloud_region}"
           root_dir: "gs://${project_id}-pipelines/clv-training"
           transformations: "gs://${project_id}-pipelines/clv-training/transformations_config_{timestamp}.json"
+          custom_transformations: "pipelines/transformations-customer-ltv.json"
           train_budget_milli_node_hours: 1000 # 1 hour
           run_evaluation: true
           run_distillation: false
