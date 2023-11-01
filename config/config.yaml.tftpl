@@ -348,6 +348,8 @@ vertex_ai:
           transformations: "gs://${project_id}-pipelines/clv-training/transformations_config_{timestamp}.json"
           #custom_transformations: "pipelines/transformations-customer-ltv.json"
           train_budget_milli_node_hours: 1000 # 1 hour
+          max_selected_features: null
+          apply_feature_selection_tuning: null
           run_evaluation: true
           run_distillation: false
           prediction_type: "regression"

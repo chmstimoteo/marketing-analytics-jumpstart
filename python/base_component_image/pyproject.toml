@@ -19,7 +19,7 @@ google-cloud-bigquery = "2.30.0"
 google-cloud-aiplatform = "1.22.0"
 google-cloud-pubsub = "2.15.0"
 google-cloud-pipeline-components = "1.0.33"
-#google-cloud-pipeline-components = "2.5.0"
+#google-cloud-pipeline-components = "1.0.44"
 
 [build-system]
 requires = ["poetry-core"]

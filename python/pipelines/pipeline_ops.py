@@ -298,13 +298,9 @@ def compile_automl_tabular_pipeline(
         pipeline_parameters['validation_fraction'] = None
         pipeline_parameters['test_fraction'] = None
 
-    # Remove unnecesary keys
+    # Remove unexpected keys
     pipeline_parameters.pop('data_source_bigquery_table_schema', None)
     pipeline_parameters.pop('custom_transformations', None)
-
-    # Adding feature selection parameters 
-    pipeline_parameters['max_selected_features'] = 50
-    pipeline_parameters['apply_feature_selection_tuning'] = True
 
     if pipeline_parameters['max_selected_features'] or pipeline_parameters['apply_feature_selection_tuning'] :
         (
@@ -316,6 +312,10 @@ def compile_automl_tabular_pipeline(
             configuration = yaml.safe_load(file)
     
     else:
+        # Remove unexpected keys 
+        pipeline_parameters.pop('max_selected_features')
+        pipeline_parameters.pop('apply_feature_selection_tuning')
+
         (
             tp,
             parameter_values,
@@ -338,7 +338,7 @@ def compile_automl_tabular_pipeline(
     parameter_values['model_display_name'] = "{}-model".format(pipeline_name)
     parameter_values['model_description'] = "{}-model".format(pipeline_name)
 
-    # hydrate pipeline.yaml with parameters as default values
+    # hydrate pipeline.yaml with parameters as default values 
     for k, v in parameter_values.items():
         if k in configuration['root']['inputDefinitions']['parameters']:
             configuration['root']['inputDefinitions']['parameters'][k]['defaultValue'] = v

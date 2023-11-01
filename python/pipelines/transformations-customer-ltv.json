@@ -5,7 +5,7 @@
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "week_of_the_year"
     }
   },
@@ -121,98 +121,82 @@
   },
   {
     "numeric": {
-      "columnName": "active_users_past_1_30_day",
-      "invalidValuesAllowed": false
+      "columnName": "active_users_past_1_30_day"
     }
   },
   {
     "numeric": {
-      "columnName": "active_users_past_30_60_day",
-      "invalidValuesAllowed": false
+      "columnName": "active_users_past_30_60_day"
     }
   },
   {
     "numeric": {
-      "columnName": "active_users_past_60_90_day",
-      "invalidValuesAllowed": false
+      "columnName": "active_users_past_60_90_day"
     }
   },
   {
     "numeric": {
-      "columnName": "active_users_past_90_120_day",
-      "invalidValuesAllowed": false
+      "columnName": "active_users_past_90_120_day"
     }
   },
   {
     "numeric": {
-      "columnName": "active_users_past_120_150_day",
-      "invalidValuesAllowed": false
+      "columnName": "active_users_past_120_150_day"
     }
   },
   {
     "numeric": {
-      "columnName": "active_users_past_150_180_day",
-      "invalidValuesAllowed": false
+      "columnName": "active_users_past_150_180_day"
     }
   },
   {
     "numeric": {
-      "columnName": "purchases_past_1_30_day",
-      "invalidValuesAllowed": false
+      "columnName": "purchases_past_1_30_day"
     }
   },
   {
     "numeric": {
-      "columnName": "purchases_past_30_60_day",
-      "invalidValuesAllowed": false
+      "columnName": "purchases_past_30_60_day"
     }
   },
   {
     "numeric": {
-      "columnName": "purchases_past_60_90_day",
-      "invalidValuesAllowed": false
+      "columnName": "purchases_past_60_90_day"
     }
   },
   {
     "numeric": {
-      "columnName": "purchases_past_90_120_day",
-      "invalidValuesAllowed": false
+      "columnName": "purchases_past_90_120_day"
     }
   },
   {
     "numeric": {
-      "columnName": "purchases_past_120_150_day",
-      "invalidValuesAllowed": false
+      "columnName": "purchases_past_120_150_day"
     }
   },
   {
     "numeric": {
-      "columnName": "purchases_past_150_180_day",
-      "invalidValuesAllowed": false
+      "columnName": "purchases_past_150_180_day"
     }
   },
   {
     "numeric": {
-      "columnName": "visits_past_1_30_day",
-      "invalidValuesAllowed": false
+      "columnName": "visits_past_1_30_day"
     }
   },
   {
     "numeric": {
-      "columnName": "visits_past_30_60_day",
-      "invalidValuesAllowed": false
+      "columnName": "visits_past_30_60_day"
     }
   },
   {
     "numeric": {
-      "columnName": "visits_past_60_90_day",
-      "invalidValuesAllowed": false
+      "columnName": "visits_past_60_90_day"
     }
   },
   {
     "numeric": {
-      "columnName": "visits_past_90_120_day",
-      "invalidValuesAllowed": false
+      "columnName": "visits_past_90_120_day"
     }
   },
   {
@@ -227,278 +211,217 @@
   },
   {
     "numeric": {
-      "columnName": "view_items_past_1_30_day",
-      "invalidValuesAllowed": false
+      "columnName": "view_items_past_1_30_day"
     }
   },
   {
     "numeric": {
-      "columnName": "view_items_past_30_60_day",
-      "invalidValuesAllowed": false
+      "columnName": "view_items_past_30_60_day"
     }
   },
   {
     "numeric": {
-      "columnName": "view_items_past_60_90_day",
-      "invalidValuesAllowed": false
+      "columnName": "view_items_past_60_90_day"
     }
   },
   {
     "numeric": {
-      "columnName": "view_items_past_90_120_day",
-      "invalidValuesAllowed": false
+      "columnName": "view_items_past_90_120_day"
     }
   },
   {
     "numeric": {
-      "columnName": "view_items_past_120_150_day",
-      "invalidValuesAllowed": false
+      "columnName": "view_items_past_120_150_day"
     }
   },
   {
     "numeric": {
-      "columnName": "view_items_past_150_180_day",
-      "invalidValuesAllowed": false
+      "columnName": "view_items_past_150_180_day"
     }
   },
   {
     "numeric": {
-      "columnName": "add_to_carts_past_1_30_day",
-      "invalidValuesAllowed": false
+      "columnName": "add_to_carts_past_1_30_day"
     }
   },
   {
     "numeric": {
-      "columnName": "add_to_carts_past_30_60_day",
-      "invalidValuesAllowed": false
+      "columnName": "add_to_carts_past_30_60_day"
     }
   },
   {
     "numeric": {
-      "columnName": "add_to_carts_past_60_90_day",
-      "invalidValuesAllowed": false
+      "columnName": "add_to_carts_past_60_90_day"
     }
   },
   {
     "numeric": {
-      "columnName": "add_to_carts_past_90_120_day",
-      "invalidValuesAllowed": false
+      "columnName": "add_to_carts_past_90_120_day"
     }
   },
   {
     "numeric": {
-      "columnName": "add_to_carts_past_120_150_day",
-      "invalidValuesAllowed": false
+      "columnName": "add_to_carts_past_120_150_day"
     }
   },
   {
     "numeric": {
-      "columnName": "add_to_carts_past_150_180_day",
-      "invalidValuesAllowed": false
+      "columnName": "add_to_carts_past_150_180_day"
     }
   },
   {
     "numeric": {
-      "columnName": "checkouts_past_1_30_day",
-      "invalidValuesAllowed": false
+      "columnName": "checkouts_past_1_30_day"
     }
   },
   {
     "numeric": {
-      "columnName": "checkouts_past_30_60_day",
-      "invalidValuesAllowed": false
+      "columnName": "checkouts_past_30_60_day"
     }
   },
   {
     "numeric": {
-      "columnName": "checkouts_past_60_90_day",
-      "invalidValuesAllowed": false
+      "columnName": "checkouts_past_60_90_day"
     }
   },
   {
     "numeric": {
-      "columnName": "checkouts_past_90_120_day",
-      "invalidValuesAllowed": false
+      "columnName": "checkouts_past_90_120_day"
     }
   },
   {
     "numeric": {
-      "columnName": "checkouts_past_120_150_day",
-      "invalidValuesAllowed": false
+      "columnName": "checkouts_past_120_150_day"
     }
   },
   {
     "numeric": {
-      "columnName": "checkouts_past_150_180_day",
-      "invalidValuesAllowed": false
+      "columnName": "checkouts_past_150_180_day"
     }
   },
   {
     "numeric": {
-      "columnName": "ltv_revenue_past_1_30_day",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_purchasers_users"
     }
   },
   {
     "numeric": {
-      "columnName": "ltv_revenue_past_30_90_day",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_average_daily_purchasers"
     }
   },
   {
     "numeric": {
-      "columnName": "ltv_revenue_past_90_180_day",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_active_users"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_purchasers_users",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_DAU"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_average_daily_purchasers",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_MAU"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_active_users",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_WAU"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_DAU",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_dau_per_mau"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_MAU",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_dau_per_wau"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_WAU",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_wau_per_mau"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_dau_per_mau",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_users_engagement_duration_seconds"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_dau_per_wau",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_average_engagement_time"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_wau_per_mau",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_average_engagement_time_per_session"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_users_engagement_duration_seconds",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_average_sessions_per_user"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_average_engagement_time",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_ARPPU"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_average_engagement_time_per_session",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_ARPU"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_average_sessions_per_user",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_average_daily_revenue"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_ARPPU",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_max_daily_revenue"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_ARPU",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_min_daily_revenue"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_average_daily_revenue",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_new_users"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_max_daily_revenue",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_returning_users"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_min_daily_revenue",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_first_time_purchasers"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_new_users",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_first_time_purchaser_conversion"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_returning_users",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_first_time_purchasers_per_new_user"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_first_time_purchasers",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_avg_user_conversion_rate"
     }
   },
   {
     "numeric": {
-      "columnName": "lifetime_first_time_purchaser_conversion",
-      "invalidValuesAllowed": false
-    }
-  },
-  {
-    "numeric": {
-      "columnName": "lifetime_first_time_purchasers_per_new_user",
-      "invalidValuesAllowed": false
-    }
-  },
-  {
-    "numeric": {
-      "columnName": "lifetime_avg_user_conversion_rate",
-      "invalidValuesAllowed": false
-    }
-  },
-  {
-    "numeric": {
-      "columnName": "lifetime_avg_session_conversion_rate",
-      "invalidValuesAllowed": false
+      "columnName": "lifetime_avg_session_conversion_rate"
     }
   }
 ]
