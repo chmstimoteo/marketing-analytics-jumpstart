@@ -5,7 +5,7 @@
 	  }
 	},
 	{
-	  "numeric": {
+	  "auto": {
 		"column_name": "week_of_the_year"
 	  }
 	},
@@ -90,17 +90,17 @@
 	  }
 	},
 	{
-	  "numeric": {
+	  "categorical": {
 		"column_name": "last_traffic_source_medium"
 	  }
 	},
 	{
-	  "numeric": {
+	  "categorical": {
 		"column_name": "last_traffic_source_name"
 	  }
 	},
 	{
-	  "numeric": {
+	  "categorical": {
 		"column_name": "last_traffic_source_source"
 	  }
 	},

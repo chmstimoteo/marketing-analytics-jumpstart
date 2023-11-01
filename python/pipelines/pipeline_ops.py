@@ -196,16 +196,19 @@ def compile_automl_tabular_pipeline(
             pipeline_parameters, pipeline_parameters_substitutions)
 
     """
-        additional_experiments: dict
+#    apply_feature_selection_tuning: bool [Default: False]
+#    bigquery_staging_full_dataset_id: str [Default: '']
 #    cv_trainer_worker_pool_specs_override: list
 #    data_source_bigquery_table_path: str [Default: '']
 #    data_source_csv_filenames: str [Default: '']
 #    dataflow_service_account: str [Default: '']
 #    dataflow_subnetwork: str [Default: '']
 #    dataflow_use_public_ips: bool [Default: True]
+#    dataset_level_custom_transformation_definitions: list
+#    dataset_level_transformations: list
 #    disable_early_stopping: bool [Default: False]
 #    distill_batch_predict_machine_type: str [Default: 'n1-standard-16']
-#    distill_batch_predict_max_replica_count: int [Default: 25.0]
+#    distill_batch_predict_max_replica_count: int [Default: 40.0]
 #    distill_batch_predict_starting_replica_count: int [Default: 25.0]
 #    enable_probabilistic_inference: bool [Default: False]
 #    encryption_spec_key_name: str [Default: '']
@@ -221,12 +224,21 @@ def compile_automl_tabular_pipeline(
 #    evaluation_dataflow_starting_num_workers: int [Default: 10.0]
 #    export_additional_model_without_custom_ops: bool [Default: False]
 #    fast_testing: bool [Default: False]
+#    feature_selection_algorithm: str [Default: 'AMI']
+#    feature_transform_engine_dataflow_disk_size_gb: int [Default: 40.0]
+#    feature_transform_engine_dataflow_machine_type: str [Default: 'n1-standard-16']
+#    feature_transform_engine_dataflow_max_num_workers: int [Default: 25.0]
+#    legacy_transformations_path: str [Default: '']
 #    location: str
+#    materialized_examples_format: str [Default: 'tfrecords_gzip']
+#    max_selected_features: int [Default: 1000.0]
 #    model_description: str [Default: '']
 #    model_display_name: str [Default: '']
+#    num_selected_features: int [Default: 0.0]
 #    optimization_objective: str
 #    optimization_objective_precision_value: float [Default: -1.0]
 #    optimization_objective_recall_value: float [Default: -1.0]
+#    parent_model: system.Artifact
 #    predefined_split_key: str [Default: '']
 #    prediction_type: str
 #    project: str
@@ -234,25 +246,22 @@ def compile_automl_tabular_pipeline(
 #    root_dir: str
 #    run_distillation: bool [Default: False]
 #    run_evaluation: bool [Default: False]
+#    run_feature_selection: bool [Default: False]
 #    stage_1_num_parallel_trials: int [Default: 35.0]
 #    stage_1_tuner_worker_pool_specs_override: list
 #    stage_1_tuning_result_artifact_uri: str [Default: '']
 #    stage_2_num_parallel_trials: int [Default: 35.0]
 #    stage_2_num_selected_trials: int [Default: 5.0]
-#    stats_and_example_gen_dataflow_disk_size_gb: int [Default: 40.0]
-#    stats_and_example_gen_dataflow_machine_type: str [Default: 'n1-standard-16']
-#    stats_and_example_gen_dataflow_max_num_workers: int [Default: 25.0]
 #    stratified_split_key: str [Default: '']
 #    study_spec_parameters_override: list
 #    target_column: str
 #    test_fraction: float [Default: -1.0]
-#    timestamp_split_key: str [Default: '']
+#    tf_auto_transform_features: dict
+#    tf_custom_transformation_definitions: list
+#    tf_transform_execution_engine: str [Default: '']
+#    tf_transformations_path: str [Default: '']
 #    train_budget_milli_node_hours: float
 #    training_fraction: float [Default: -1.0]
-#    transform_dataflow_disk_size_gb: int [Default: 40.0]
-#    transform_dataflow_machine_type: str [Default: 'n1-standard-16']
-#    transform_dataflow_max_num_workers: int [Default: 25.0]
-#    transformations: str
 #    validation_fraction: float [Default: -1.0]
 #    vertex_dataset: system.Artifact
 #    weight_column: str [Default: '']
@@ -293,13 +302,27 @@ def compile_automl_tabular_pipeline(
     pipeline_parameters.pop('data_source_bigquery_table_schema', None)
     pipeline_parameters.pop('custom_transformations', None)
 
-    (
-        tp,
-        parameter_values,
-    ) = automl_tabular_utils.get_automl_tabular_pipeline_and_parameters(**pipeline_parameters)
+    # Adding feature selection parameters 
+    pipeline_parameters['max_selected_features'] = 50
+    pipeline_parameters['apply_feature_selection_tuning'] = True
 
-    with open(pathlib.Path(__file__).parent.resolve().joinpath('automl_tabular_pl_v3.yaml'), 'r') as file:
-        configuration = yaml.safe_load(file)
+    if pipeline_parameters['max_selected_features'] or pipeline_parameters['apply_feature_selection_tuning'] :
+        (
+            tp,
+            parameter_values,
+        ) = automl_tabular_utils.get_automl_tabular_feature_selection_pipeline_and_parameters(**pipeline_parameters)
+
+        with open(pathlib.Path(__file__).parent.resolve().joinpath('automl_tabular_pl_v4.yaml'), 'r') as file:
+            configuration = yaml.safe_load(file)
+    
+    else:
+        (
+            tp,
+            parameter_values,
+        ) = automl_tabular_utils.get_automl_tabular_pipeline_and_parameters(**pipeline_parameters)
+
+        with open(pathlib.Path(__file__).parent.resolve().joinpath('automl_tabular_pl_v3.yaml'), 'r') as file:
+            configuration = yaml.safe_load(file)
 
     # can process yaml to change pipeline name
     configuration['pipelineInfo']['name'] = pipeline_name
