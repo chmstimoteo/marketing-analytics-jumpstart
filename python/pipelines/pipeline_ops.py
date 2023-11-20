@@ -312,7 +312,7 @@ def compile_automl_tabular_pipeline(
             configuration = yaml.safe_load(file)
     
     else:
-        # Remove unexpected keys 
+        # Remove unexpected keys
         pipeline_parameters.pop('max_selected_features')
         pipeline_parameters.pop('apply_feature_selection_tuning')
 
@@ -345,9 +345,11 @@ def compile_automl_tabular_pipeline(
         else:
             raise Exception("parameter not found in pipeline definition: {}".format(k))
 
+    logging.info(f'Writing template file: {template_path}')
     with open(template_path, 'w') as yaml_file:
         yaml.dump(configuration, yaml_file)
 
+    logging.info(f'Writing parameters file:{parameters_path}')
     with open(parameters_path, 'w') as param_file:
         yaml.dump(parameter_values, param_file)
 

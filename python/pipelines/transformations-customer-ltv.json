@@ -1,6 +1,6 @@
 [
   {
-    "categorical": {
+    "auto": {
       "columnName": "month_of_the_year"
     }
   },
@@ -10,192 +10,192 @@
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "day_of_the_month"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "day_of_week"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "device_category"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "device_mobile_brand_name"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "device_mobile_model_name"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "device_os"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "device_os_version"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "device_language"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "device_web_browser"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "device_web_browser_version"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "geo_sub_continent"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "geo_country"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "geo_region"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "geo_city"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "geo_metro"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "last_traffic_source_medium"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "last_traffic_source_name"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "last_traffic_source_source"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "first_traffic_source_medium"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "first_traffic_source_name"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "first_traffic_source_source"
     }
   },
   {
-    "categorical": {
+    "auto": {
       "columnName": "has_signed_in_with_user_id"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "active_users_past_1_30_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "active_users_past_30_60_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "active_users_past_60_90_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "active_users_past_90_120_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "active_users_past_120_150_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "active_users_past_150_180_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "purchases_past_1_30_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "purchases_past_30_60_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "purchases_past_60_90_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "purchases_past_90_120_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "purchases_past_120_150_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "purchases_past_150_180_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "visits_past_1_30_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "visits_past_30_60_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "visits_past_60_90_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "visits_past_90_120_day"
     }
   },
@@ -210,217 +210,217 @@
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "view_items_past_1_30_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "view_items_past_30_60_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "view_items_past_60_90_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "view_items_past_90_120_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "view_items_past_120_150_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "view_items_past_150_180_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "add_to_carts_past_1_30_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "add_to_carts_past_30_60_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "add_to_carts_past_60_90_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "add_to_carts_past_90_120_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "add_to_carts_past_120_150_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "add_to_carts_past_150_180_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "checkouts_past_1_30_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "checkouts_past_30_60_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "checkouts_past_60_90_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "checkouts_past_90_120_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "checkouts_past_120_150_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "checkouts_past_150_180_day"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_purchasers_users"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_average_daily_purchasers"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_active_users"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_DAU"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_MAU"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_WAU"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_dau_per_mau"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_dau_per_wau"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_wau_per_mau"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_users_engagement_duration_seconds"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_average_engagement_time"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_average_engagement_time_per_session"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_average_sessions_per_user"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_ARPPU"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_ARPU"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_average_daily_revenue"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_max_daily_revenue"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_min_daily_revenue"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_new_users"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_returning_users"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_first_time_purchasers"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_first_time_purchaser_conversion"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_first_time_purchasers_per_new_user"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_avg_user_conversion_rate"
     }
   },
   {
-    "numeric": {
+    "auto": {
       "columnName": "lifetime_avg_session_conversion_rate"
     }
   }
